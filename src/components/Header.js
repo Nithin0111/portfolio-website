@@ -3,7 +3,7 @@ import styled from "styled-components";
 
 const Header = () => {
   return (
-    <NavBar>
+    <NavBar id="nav-bar">
       <NavContainer>
         <Logo>n</Logo>
         <NavList>

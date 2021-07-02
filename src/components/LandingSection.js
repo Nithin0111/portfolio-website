@@ -3,7 +3,7 @@ import styled from "styled-components";
 
 const LandingSection = () => {
   return (
-    <Landing>
+    <Landing id="landing-section">
       <LandingBigCircleIllustration></LandingBigCircleIllustration>
       <LandingSmallCircle></LandingSmallCircle>
       <Stripe1></Stripe1>
