@@ -89,8 +89,11 @@ const ResumeButton = styled(GetInTouchButton)`
   display: flex;
   justify-content: center;
   align-items: center;
+  & > span {
+    display: grid;
+    place-items: center;
+  }
   & > span > img {
-    margin-top: 5px;
     margin-right: 5px;
   }
 `;
