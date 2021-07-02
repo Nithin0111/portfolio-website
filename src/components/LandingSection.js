@@ -62,12 +62,12 @@ const LandingWrapper = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
-  width: 85%;
+  width: 90%;
   margin: auto;
   padding: 20px 0px;
 `;
 const HeroTextWrapper = styled.div`
-  width: 50%;
+  width: 40%;
   & > h1 {
     color: #fff;
     font-family: "Poppins";
@@ -169,19 +169,19 @@ const Stripe1 = styled.div`
   height: 900px;
   width: 60px;
   position: absolute;
-  bottom: -21vh;
+  bottom: -30vh;
   right: 0;
   background-color: white;
-  transform: rotate(-60deg);
+  transform: rotate(-50deg);
 `;
 const Stripe2 = styled(Stripe1)`
   height: 800px;
-  bottom: -30vh;
+  bottom: -40vh;
   background: #3d348b;
 `;
 const Stripe3 = styled(Stripe1)`
   height: 700px;
-  bottom: -40vh;
+  bottom: -50vh;
   background: #e6af2e;
 `;
 
