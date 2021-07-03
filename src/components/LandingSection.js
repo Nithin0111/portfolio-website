@@ -62,6 +62,7 @@ const LandingWrapper = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
+  flex-wrap: wrap;
   width: 90%;
   margin: auto;
   padding: 20px 0px;
@@ -72,6 +73,18 @@ const HeroTextWrapper = styled.div`
     color: #fff;
     font-family: "Poppins";
     font-size: 48px;
+    @media (max-width: 450px) {
+      font-size: 32px;
+      padding-top: 5vh;
+    }
+  }
+  @media (max-width: 450px) {
+    width: 90%;
+    margin: auto;
+  }
+  @media (max-width: 1300px) and (min-width: 450px) {
+    width: 90%;
+    margin: auto;
   }
   & > p {
     color: #e0dddd;
@@ -81,6 +94,9 @@ const HeroTextWrapper = styled.div`
     font-weight: bold;
     line-height: 1.8;
     margin-top: 20px;
+    @media (max-width: 450px) {
+      font-size: 18px;
+    }
   }
 `;
 
@@ -96,6 +112,9 @@ const SocialWrapper = styled.div`
     font-size: 24px;
     font-weight: bold;
     margin-top: 10px;
+    @media (max-width: 450px) {
+      font-size: 20px;
+    }
   }
 `;
 
@@ -128,6 +147,10 @@ const ProjectsButton = styled.div`
   & > img {
     margin-left: 10px;
   }
+  @media (max-width: 450px) {
+    padding: 5px 10px;
+    font-size: 16px;
+  }
 `;
 
 const ResumeButton = styled.div`
@@ -143,11 +166,21 @@ const ResumeButton = styled.div`
   & > img {
     margin-right: 10px;
   }
+  @media (max-width: 450px) {
+    padding: 5px 10px;
+    font-size: 16px;
+  }
 `;
 
 const HeroImage = styled.div`
   margin-right: 6vw;
   z-index: 1;
+  padding-top: 5vh;
+  & > img {
+    max-width: 100%;
+    min-width: 200px;
+    height: auto;
+  }
 `;
 
 const LandingBigCircleIllustration = styled.div`
@@ -156,6 +189,12 @@ const LandingBigCircleIllustration = styled.div`
   bottom: 0;
   height: 423px;
   width: 423px;
+  @media (max-width: 450px) {
+    height: 300px;
+    width: 300px;
+    left: 0;
+  }
+
   border-radius: 50%;
   background: linear-gradient(225.9deg, #e6af2e 17.52%, #3d348b 80.83%);
 `;
@@ -164,6 +203,10 @@ const LandingSmallCircle = styled(LandingBigCircleIllustration)`
   height: 150px;
   width: 150px;
   right: 25vw;
+  @media (max-width: 450px) {
+    height: 50px;
+    width: 50px;
+  }
 `;
 const Stripe1 = styled.div`
   height: 900px;
@@ -173,11 +216,19 @@ const Stripe1 = styled.div`
   right: 0;
   background-color: white;
   transform: rotate(-50deg);
+  @media (max-width: 450px) {
+    width: 40px;
+    height: 600px;
+  }
 `;
 const Stripe2 = styled(Stripe1)`
   height: 800px;
   bottom: -40vh;
   background: #3d348b;
+  @media (max-width: 450px) {
+    width: 40px;
+    height: 400px;
+  }
 `;
 const Stripe3 = styled(Stripe1)`
   height: 700px;
@@ -205,5 +256,9 @@ const SourceBar = styled.div`
     height: 25px;
     width: 25px;
     margin-left: 10px;
+  }
+
+  @media (max-width: 450px) {
+    display: none;
   }
 `;

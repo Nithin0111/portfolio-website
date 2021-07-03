@@ -7,7 +7,7 @@ const ContactSection = () => {
       <ContactIllustration></ContactIllustration>
       <MoveToTop>
         {" "}
-        <a href="#nav-bar">
+        <a href="#home">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             viewBox="0 0 24 24"
@@ -24,21 +24,46 @@ const ContactSection = () => {
         <h2>Get in touch</h2>
         <h3>Let's build your next big project together.</h3>
 
-        <MailPart>
-          ✉️ Mail me at:
-          <p>nithinchowdary0705@gmail.com</p>
-        </MailPart>
+        <ContactWrapper>
+          <ContactForm>
+            <form action="">
+              <input type="text" name="name" placeholder="Name:" />
+              <br />
+              <input type="email" name="email" placeholder="Email:" />
+              <br />
+              <textarea
+                name="message"
+                cols="30"
+                rows="5"
+                placeholder="Message:"
+              />
+              <br />
+              <button type="button">Submit</button>
+            </form>
+          </ContactForm>
+          <ContactInfo>
+            <MailPart>
+              Alternatively ✉️ Mail me at:
+              <p>
+                {" "}
+                <a href="mailto:developer.nithin01@gmail.com">
+                  developer.nithin01@gmail.com
+                </a>{" "}
+              </p>
+            </MailPart>
 
-        <ContactSocialContainer>
-          or else I am available here
-          <ContactSocialWrapper>
-            <img src="/images/github-icon.svg" alt="Github Icon" />
-            <img src="/images/twitter-icon.svg" alt="Twitter Icon" />
-            <img src="/images/linkedin-icon.svg" alt="Linkedin Icon" />
-          </ContactSocialWrapper>
-        </ContactSocialContainer>
+            <ContactSocialContainer>
+              or else I am available here
+              <ContactSocialWrapper>
+                <img src="/images/github-icon.svg" alt="Github Icon" />
+                <img src="/images/twitter-icon.svg" alt="Twitter Icon" />
+                <img src="/images/linkedin-icon.svg" alt="Linkedin Icon" />
+              </ContactSocialWrapper>
+            </ContactSocialContainer>
 
-        <FinalCta>Feel free to contact me on any medium 😊</FinalCta>
+            <FinalCta>Feel free to contact me on any medium 😊</FinalCta>
+          </ContactInfo>
+        </ContactWrapper>
       </ContactSectionWrapper>
     </ContactContainer>
   );
@@ -61,18 +86,33 @@ const ContactSectionWrapper = styled.div`
     font-size: 22px;
     font-family: "Mulish";
     font-weight: 700;
+    z-index: 1;
+    @media (max-width: 450px) {
+      position: relative;
+      font-size: 16px;
+    }
   }
   & > h2 {
     font-size: 46px;
     font-family: "Poppins";
     font-weight: 700;
     color: #fff;
+    z-index: 1;
+    @media (max-width: 450px) {
+      position: relative;
+      font-size: 32px;
+    }
   }
   & > h3 {
     font-size: 46px;
     font-family: "Poppins";
     font-weight: 700;
     color: #e6af2e;
+    z-index: 1;
+    @media (max-width: 450px) {
+      position: relative;
+      font-size: 32px;
+    }
   }
 `;
 const MailPart = styled.div`
@@ -80,8 +120,8 @@ const MailPart = styled.div`
   font-weight: 700;
   color: #fff;
   font-size: 24px;
-  & > p {
-    color: #0676b6;
+  @media (max-width: 450px) {
+    font-size: 20px;
   }
 `;
 
@@ -91,6 +131,9 @@ const ContactSocialContainer = styled.div`
   color: #fff;
   font-size: 24px;
   margin-top: 1vh;
+  @media (max-width: 450px) {
+    font-size: 20px;
+  }
 `;
 
 const ContactSocialWrapper = styled.div`
@@ -105,6 +148,9 @@ const FinalCta = styled.div`
   color: #fff;
   font-size: 24px;
   margin-top: 2vh;
+  @media (max-width: 450px) {
+    font-size: 20px;
+  }
 `;
 
 const ContactIllustration = styled.div`
@@ -115,6 +161,11 @@ const ContactIllustration = styled.div`
   position: absolute;
   top: -20vh;
   right: -5vw;
+  @media (max-width: 450px) {
+    height: 200px;
+    width: 200px;
+    top: -15vh;
+  }
 `;
 const MoveToTop = styled.div`
   background: #ffe9b5;
@@ -129,3 +180,69 @@ const MoveToTop = styled.div`
   place-items: center;
   cursor: pointer;
 `;
+
+const ContactWrapper = styled.div`
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+  margin-top: 2vh;
+`;
+const ContactForm = styled.div`
+  input {
+    height: 50px;
+    max-width: 400px;
+    background-color: #3d348b;
+    border: 1px solid #fff;
+    outline: none;
+    margin-top: 1vh;
+    font-family: "Poppins";
+    font-size: 20px;
+    font-weight: 700;
+    color: #fff;
+    @media (max-width: 670px) {
+      max-width: 90vw;
+    }
+    &::placeholder {
+      font-family: "Poppins";
+      font-size: 20px;
+      font-weight: 700;
+      padding-left: 10px;
+      color: #fff;
+    }
+  }
+
+  textarea {
+    max-width: 400px;
+    background-color: #3d348b;
+    outline: none;
+    margin-top: 1vh;
+    font-family: "Poppins";
+    font-size: 20px;
+    font-weight: 700;
+    color: #fff;
+    border: 1px solid #fff;
+    @media (max-width: 670px) {
+      max-width: 90vw;
+    }
+    &::placeholder {
+      font-family: "Poppins";
+      font-size: 20px;
+      font-weight: 700;
+      padding-left: 10px;
+      color: #fff;
+    }
+  }
+
+  button {
+    margin-top: 1vh;
+    padding: 8px 44px;
+    background-color: #e6af2e;
+    font-family: "Poppins";
+    font-size: 20px;
+    font-weight: 700;
+    border: none;
+    cursor: pointer;
+  }
+`;
+const ContactInfo = styled.div``;

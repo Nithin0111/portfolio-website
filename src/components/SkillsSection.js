@@ -113,12 +113,19 @@ const SkillsSectionWrapper = styled.div`
     font-size: 22px;
     font-family: "Mulish";
     font-weight: 700;
+
+    @media (max-width: 450px) {
+      font-size: 16px;
+    }
   }
   & > h2 {
     font-size: 46px;
     font-family: "Poppins";
     font-weight: 700;
     color: #fff;
+    @media (max-width: 450px) {
+      font-size: 32px;
+    }
   }
 `;
 const SkillsWrapper = styled.div`
@@ -128,12 +135,13 @@ const SkillsWrapper = styled.div`
 `;
 const Skill = styled.div`
   display: flex;
+  justify-content: center;
   margin-top: 3vh;
   margin-right: 1vw;
 `;
 const SkillCount = styled.div`
   background-color: #e6af2e;
-  width: 30px;
+  max-width: 30px;
   border-top-left-radius: 5px;
   border-bottom-left-radius: 5px;
   width: 50px;
@@ -142,6 +150,9 @@ const SkillCount = styled.div`
   font-size: 22px;
   display: grid;
   place-items: center;
+  @media (max-width: 450px) {
+    font-size: 16px;
+  }
 `;
 const SkillName = styled.div`
   font-family: "Poppins";
@@ -156,6 +167,9 @@ const SkillName = styled.div`
   place-items: center;
   color: #fff;
   min-height: 60px;
+  @media (max-width: 450px) {
+    font-size: 18px;
+  }
 `;
 
 const MoreButton = styled.div`

@@ -262,12 +262,18 @@ const ProjectsSectioWrapper = styled.div`
     color: #e6af2e;
     font-weight: 700;
     margin-top: 10px;
+    @media (max-width: 450px) {
+      font-size: 16px;
+    }
   }
   & > h2 {
     font-family: "Poppins";
     font-size: 46px;
     font-weight: 700;
     color: #fff;
+    @media (max-width: 450px) {
+      font-size: 28px;
+    }
   }
 `;
 
@@ -286,6 +292,20 @@ const Project = styled.div`
   position: relative;
   padding: 40px 2vw;
   margin-top: 3vh;
+  @media (max-width: 450px) {
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  @media (max-width: 1220px) and (min-width: 820px) {
+    width: 45%;
+  }
+
+  @media (max-width: 820px) and (min-width: 450px) {
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+  }
 `;
 
 const ProjectCount = styled.div`
