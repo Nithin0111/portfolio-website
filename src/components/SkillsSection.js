@@ -131,6 +131,7 @@ const SkillsSectionWrapper = styled.div`
 const SkillsWrapper = styled.div`
   display: flex;
   align-items: center;
+  justify-content: center;
   flex-wrap: wrap;
 `;
 const Skill = styled.div`
@@ -151,7 +152,7 @@ const SkillCount = styled.div`
   display: grid;
   place-items: center;
   @media (max-width: 450px) {
-    font-size: 16px;
+    font-size: 14px;
   }
 `;
 const SkillName = styled.div`
@@ -168,7 +169,7 @@ const SkillName = styled.div`
   color: #fff;
   min-height: 60px;
   @media (max-width: 450px) {
-    font-size: 18px;
+    font-size: 16px;
   }
 `;
 
