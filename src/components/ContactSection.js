@@ -1,7 +1,33 @@
-import React from "react";
+import React, { useState } from "react";
 import styled from "styled-components";
+import emailjs from "emailjs-com";
 
 const ContactSection = () => {
+  const [sentEmail, setSentEmail] = useState(false);
+
+  function sendEmail(e) {
+    e.preventDefault();
+
+    emailjs
+      .sendForm(
+        "service_448a26k",
+        "template_44kb7pi",
+        e.target,
+        "user_xci6orbuqX5vafgCY46ha"
+      )
+      .then(
+        (result) => {
+          console.log(result.text);
+          setSentEmail(!sentEmail);
+        },
+        (error) => {
+          console.log(error.text);
+        }
+      );
+
+    e.target.reset();
+  }
+
   return (
     <ContactContainer>
       <ContactIllustration></ContactIllustration>
@@ -26,7 +52,8 @@ const ContactSection = () => {
 
         <ContactWrapper>
           <ContactForm>
-            <form action="">
+            <p>{sentEmail ? "Email Sent" : ""}</p>
+            <form onSubmit={sendEmail}>
               <input type="text" name="name" placeholder="Name:" />
               <br />
               <input type="email" name="email" placeholder="Email:" />
@@ -38,7 +65,7 @@ const ContactSection = () => {
                 placeholder="Message:"
               />
               <br />
-              <button type="button">Submit</button>
+              <button type="submit">Submit</button>
             </form>
           </ContactForm>
           <ContactInfo>
@@ -189,6 +216,12 @@ const ContactWrapper = styled.div`
   margin-top: 2vh;
 `;
 const ContactForm = styled.div`
+  p {
+    color: green;
+    font-family: "Poppins";
+    font-size: 22px;
+    font-weight: bold;
+  }
   input {
     height: 50px;
     max-width: 400px;
