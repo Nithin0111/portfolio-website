@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import styled from "styled-components";
+import { animateScroll as scroll, Link } from "react-scroll";
 
 const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -15,12 +16,20 @@ const Header = () => {
         </NavBurger>
         <NavList isOpen={isOpen}>
           <NavItems>
-            <NavItem>Home</NavItem>
-            <NavItem>Projects</NavItem>
+            <Link to="projects" smooth={true} duration={1000}>
+              <NavItem>Projects</NavItem>
+            </Link>
+            <Link to="skills" smooth={true} duration={1000}>
+              <NavItem>Skills</NavItem>
+            </Link>
+
             <NavItem>Blog</NavItem>
           </NavItems>
           <NavCta>
-            <GetInTouchButton>Get In Touch</GetInTouchButton>
+            <Link to="contact" smooth={true} duration={1000}>
+              <GetInTouchButton>Get In Touch</GetInTouchButton>
+            </Link>
+
             <ResumeButton>
               <span>
                 <img src="/images/download-icon.svg" alt="Download Icon" />
@@ -112,6 +121,7 @@ const GetInTouchButton = styled.div`
   padding: 10px 24px;
   border-radius: 50px;
   margin-right: 1vw;
+  cursor: pointer;
 `;
 const ResumeButton = styled(GetInTouchButton)`
   background-color: #e6af2e;
@@ -119,6 +129,7 @@ const ResumeButton = styled(GetInTouchButton)`
   color: #000;
   display: flex;
   justify-content: center;
+  cursor: pointer;
   align-items: center;
   & > span {
     display: grid;

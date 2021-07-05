@@ -3,7 +3,7 @@ import styled from "styled-components";
 
 const ProjectsSection = () => {
   return (
-    <SectionWrapper>
+    <SectionWrapper id="projects">
       <ProjectIllustration></ProjectIllustration>
       <ProjectsSectioWrapper>
         <p>Time to judge me 😂</p>

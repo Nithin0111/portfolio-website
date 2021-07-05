@@ -3,7 +3,7 @@ import styled from "styled-components";
 
 const SkillsSection = () => {
   return (
-    <SkillsSectionContainer>
+    <SkillsSectionContainer id="skills">
       <SkillsSectionWrapper>
         <p>Skills 💪</p>
         <h2>
@@ -92,7 +92,9 @@ const SkillsSection = () => {
             <SkillName>Figma</SkillName>
           </Skill>
         </SkillsWrapper>
-        <MoreButton>More on the way...</MoreButton>
+        <MoreButtonWrapper>
+          <MoreButton>More on the way...</MoreButton>
+        </MoreButtonWrapper>
       </SkillsSectionWrapper>
     </SkillsSectionContainer>
   );
@@ -173,6 +175,11 @@ const SkillName = styled.div`
   }
 `;
 
+const MoreButtonWrapper = styled.div`
+  display: grid;
+  place-items: center;
+`;
+
 const MoreButton = styled.div`
   font-family: "Poppins";
   font-weight: 700;
@@ -181,4 +188,7 @@ const MoreButton = styled.div`
   padding: 10px 20px;
   border-radius: 5px;
   margin-top: 3vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 `;

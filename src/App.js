@@ -1,4 +1,7 @@
 import "./App.css";
+//react router
+import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+
 import Header from "./components/Header";
 import LandingSection from "./components/LandingSection";
 import ProjectsSection from "./components/ProjectsSection";
@@ -8,11 +11,17 @@ import ContactSection from "./components/ContactSection";
 function App() {
   return (
     <>
-      <Header />
-      <LandingSection />
-      <ProjectsSection />
-      <SkillsSection />
-      <ContactSection />
+      <Router>
+        <Switch>
+          <Route exact path="/">
+            <Header />
+            <LandingSection />
+            <ProjectsSection />
+            <SkillsSection />
+            <ContactSection />
+          </Route>
+        </Switch>
+      </Router>
     </>
   );
 }

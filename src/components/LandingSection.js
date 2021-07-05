@@ -1,5 +1,6 @@
 import React from "react";
 import styled from "styled-components";
+import { Link } from "react-scroll";
 
 const LandingSection = () => {
   return (
@@ -25,16 +26,36 @@ const LandingSection = () => {
           <SocialWrapper>
             <h3>Can be found at:</h3>
             <SocialIcons>
-              <img src="/images/github-icon.svg" alt="Github Icon" />
-              <img src="/images/twitter-icon.svg" alt="Twitter Icon" />
-              <img src="/images/linkedin-icon.svg" alt="Linkedin-Icon" />
+              <a
+                href="https://www.github.com/nithin0111"
+                target="_blank"
+                rel="noreferrer"
+              >
+                <img src="/images/github-icon.svg" alt="Github Icon" />
+              </a>
+              <a
+                href="https://www.twitter.com/nithin7557"
+                target="_blank"
+                rel="noreferrer"
+              >
+                <img src="/images/twitter-icon.svg" alt="Twitter Icon" />
+              </a>
+              <a
+                href="https://www.linkedin.com/in/nithin-harsha-u-165ba4136/"
+                target="_blank"
+                rel="noreferrer"
+              >
+                <img src="/images/linkedin-icon.svg" alt="Linkedin-Icon" />
+              </a>
             </SocialIcons>
           </SocialWrapper>
           <CtaWrapper>
-            <ProjectsButton>
-              Projects
-              <img src="/images/arrow-icon.svg" alt="Arrow Icon" />
-            </ProjectsButton>
+            <Link to="projects" smooth={true} duration={1000}>
+              <ProjectsButton>
+                Projects
+                <img src="/images/arrow-icon.svg" alt="Arrow Icon" />
+              </ProjectsButton>
+            </Link>
             <ResumeButton>
               <img src="/images/download-icon.svg" alt="" />
               Resume(107kb)
@@ -144,6 +165,8 @@ const ProjectsButton = styled.div`
   border-radius: 7px;
   display: flex;
   align-items: center;
+
+  cursor: pointer;
   & > img {
     margin-left: 10px;
   }
@@ -162,6 +185,7 @@ const ResumeButton = styled.div`
   font-family: "Poppins";
   font-weight: 700;
   font-size: 20px;
+  cursor: pointer;
   margin-left: 1vw;
   & > img {
     margin-right: 10px;
