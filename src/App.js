@@ -31,7 +31,7 @@ function App() {
           <Route exact path="/">
             {loading ? (
               <div className="loader">
-                <HashLoader color={"#36D7B7"} loading={loading} size={150} />
+                <HashLoader color={"#3d348b"} loading={loading} size={150} />
               </div>
             ) : (
               <>
