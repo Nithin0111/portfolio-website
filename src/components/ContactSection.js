@@ -205,6 +205,10 @@ const MoveToTop = styled.div`
   display: grid;
   place-items: center;
   cursor: pointer;
+  @media (max-width: 500px) {
+    width: 50px;
+    height: 40px;
+  }
 `;
 
 const ContactWrapper = styled.div`

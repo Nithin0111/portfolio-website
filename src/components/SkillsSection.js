@@ -126,7 +126,7 @@ const SkillsSectionWrapper = styled.div`
     font-weight: 700;
     color: #fff;
     @media (max-width: 450px) {
-      font-size: 32px;
+      font-size: 24px;
     }
   }
 `;
@@ -135,6 +135,9 @@ const SkillsWrapper = styled.div`
   align-items: center;
   justify-content: center;
   flex-wrap: wrap;
+  @media (max-width: 670px) {
+    justify-content: space-between;
+  }
 `;
 const Skill = styled.div`
   display: flex;
@@ -170,8 +173,9 @@ const SkillName = styled.div`
   place-items: center;
   color: #fff;
   min-height: 60px;
-  @media (max-width: 450px) {
-    font-size: 16px;
+  @media (max-width: 670px) {
+    font-size: 14px;
+    min-width: 30vw;
   }
 `;
 

@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import styled from "styled-components";
-import { animateScroll as scroll, Link } from "react-scroll";
+import { Link } from "react-scroll";
 
 const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -52,6 +52,9 @@ const NavBar = styled.nav`
   background-color: #050505;
   display: grid;
   place-items: center;
+  position: fixed;
+  z-index: 999999;
+  width: 100%;
 `;
 
 const NavContainer = styled.div`
@@ -61,6 +64,12 @@ const NavContainer = styled.div`
   justify-content: space-between;
   align-items: center;
   flex-wrap: wrap;
+  position: fixed;
+  top: 0vh;
+  padding-top: 2vh;
+  z-index: 999999;
+  left: 5%;
+  right: 5%;
 `;
 
 const Logo = styled.h1`
@@ -82,7 +91,7 @@ const NavList = styled.div`
     position: fixed;
     top: ${(props) => (props.isOpen ? "10vh" : "-100vh")};
     z-index: 999;
-    background: linear-gradient(0.05deg, #e6af2e 0.05%, #3d348b 99.96%);
+    background: #3d348b;
   }
 `;
 const NavItems = styled.ul`
@@ -109,6 +118,9 @@ const NavItem = styled.li`
     color: yellow;
     transform: scale(1.1);
   }
+  @media (max-width: 670px) {
+    color: yellow;
+  }
 `;
 const GetInTouchButton = styled.div`
   background-color: #3d348b;
@@ -122,6 +134,10 @@ const GetInTouchButton = styled.div`
   border-radius: 50px;
   margin-right: 1vw;
   cursor: pointer;
+  border: 1px solid white;
+  @media (max-width: 670px) {
+    margin-top: 2vh;
+  }
 `;
 const ResumeButton = styled(GetInTouchButton)`
   background-color: #e6af2e;
@@ -131,6 +147,7 @@ const ResumeButton = styled(GetInTouchButton)`
   justify-content: center;
   cursor: pointer;
   align-items: center;
+  border: 1px solid #3d3a8b;
   & > span {
     display: grid;
     place-items: center;

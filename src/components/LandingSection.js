@@ -77,6 +77,10 @@ const Landing = styled.div`
   background-color: #050505;
   position: relative;
   overflow: hidden;
+  padding-top: 5vh;
+  @media (max-width: 670px) {
+    padding-top: 8vh;
+  }
 `;
 
 const LandingWrapper = styled.div`
