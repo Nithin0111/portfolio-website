@@ -175,7 +175,7 @@ const SkillName = styled.div`
   min-height: 60px;
   @media (max-width: 670px) {
     font-size: 14px;
-    min-width: 30vw;
+    min-width: 35vw;
   }
 `;
 
