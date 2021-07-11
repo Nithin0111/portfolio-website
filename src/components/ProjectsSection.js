@@ -323,6 +323,9 @@ const ProjectCount = styled.div`
   flex-direction: column;
   justify-content: flex-end;
   align-items: center;
+  @media (max-width: 670px) {
+    left: 5vw;
+  }
 `;
 const ProjectTitle = styled.h3`
   font-family: "Poppins";
@@ -330,6 +333,10 @@ const ProjectTitle = styled.h3`
   color: #fff;
   font-size: 32px;
   padding: 20px 0px;
+  @media (max-width: 670px) {
+    font-size: 24px;
+    padding: 20px 10px;
+  }
 `;
 const ProjectDescription = styled.p`
   color: #969191;
@@ -338,6 +345,10 @@ const ProjectDescription = styled.p`
   font-size: 18px;
   font-weight: 600;
   line-height: 1.5;
+  @media (max-width: 670px) {
+    font-size: 16px;
+    padding: 0px 10px;
+  }
 `;
 const ProjectCtaWrapper = styled.div`
   width: fit-content;
@@ -357,6 +368,12 @@ const LiveButton = styled.div`
     margin-left: 0.2vw;
   }
   margin-right: 10px;
+  @media (max-width: 670px) {
+    font-size: 14px;
+    padding: 8px 16px;
+    margin-left: 10px;
+    margin-top: 3vh;
+  }
 `;
 const SourceButton = styled(LiveButton)`
   background-color: #3d348b;

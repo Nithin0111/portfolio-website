@@ -147,7 +147,7 @@ const MailPart = styled.div`
   color: #fff;
   font-size: 24px;
   @media (max-width: 450px) {
-    font-size: 18px;
+    font-size: 20px;
   }
 `;
 
@@ -158,7 +158,8 @@ const ContactSocialContainer = styled.div`
   font-size: 24px;
   margin-top: 1vh;
   @media (max-width: 450px) {
-    font-size: 18px;
+    font-size: 20px;
+    margin-top: 2vh;
   }
 `;
 
@@ -175,7 +176,7 @@ const FinalCta = styled.div`
   font-size: 24px;
   margin-top: 2vh;
   @media (max-width: 450px) {
-    font-size: 18px;
+    font-size: 20px;
   }
 `;
 
@@ -247,6 +248,9 @@ const ContactForm = styled.div`
       padding-left: 10px;
       color: #fff;
     }
+    @media (max-width: 670px) {
+      margin-top: 2vh;
+    }
   }
 
   textarea {
@@ -270,6 +274,9 @@ const ContactForm = styled.div`
       padding-left: 10px;
       color: #fff;
     }
+    @media (max-width: 670px) {
+      margin-top: 2vh;
+    }
   }
 
   button {
@@ -281,10 +288,11 @@ const ContactForm = styled.div`
     font-weight: 700;
     border: none;
     cursor: pointer;
+    border-radius: 10px;
   }
 `;
 const ContactInfo = styled.div`
   @media (max-width: 450px) {
-    margin-top: 20px;
+    margin-top: 30px;
   }
 `;

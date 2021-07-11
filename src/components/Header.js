@@ -9,11 +9,17 @@ const Header = () => {
     <NavBar id="home">
       <NavContainer>
         <Logo>n</Logo>
-        <NavBurger onClick={() => setIsOpen(!isOpen)}>
-          <Burger1 isOpen={isOpen} />
-          <Burger2 isOpen={isOpen} />
-          <Burger3 isOpen={isOpen} />
-        </NavBurger>
+        <MobilenavCta>
+          <Link to="contact" smooth={true} duration={1000}>
+            <GetInTouchButtonMobile>Get In Touch</GetInTouchButtonMobile>
+          </Link>
+
+          <NavBurger onClick={() => setIsOpen(!isOpen)}>
+            <Burger1 isOpen={isOpen} />
+            <Burger2 isOpen={isOpen} />
+            <Burger3 isOpen={isOpen} />
+          </NavBurger>
+        </MobilenavCta>
         <NavList isOpen={isOpen}>
           <NavItems>
             <Link to="projects" smooth={true} duration={1000}>
@@ -86,12 +92,18 @@ const NavList = styled.div`
   @media (max-width: 670px) {
     display: flex;
     flex-direction: column;
-    height: 100vh;
-    min-width: 100%;
+    height: 55%;
+    max-width: 70%;
+    margin-left: auto;
     position: fixed;
-    top: ${(props) => (props.isOpen ? "10vh" : "-100vh")};
+    top: 10vh;
+    right: ${(props) => (props.isOpen ? "0" : "-100vw")};
     z-index: 999;
     background: #3d348b;
+    border-bottom-left-radius: 140px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
   }
 `;
 const NavItems = styled.ul`
@@ -103,6 +115,7 @@ const NavItems = styled.ul`
   @media (max-width: 670px) {
     flex-direction: column;
     height: 50vh;
+    margin-top: 7vh;
   }
 `;
 const NavItem = styled.li`
@@ -135,9 +148,6 @@ const GetInTouchButton = styled.div`
   margin-right: 1vw;
   cursor: pointer;
   border: 1px solid white;
-  @media (max-width: 670px) {
-    margin-top: 2vh;
-  }
 `;
 const ResumeButton = styled(GetInTouchButton)`
   background-color: #e6af2e;
@@ -154,6 +164,9 @@ const ResumeButton = styled(GetInTouchButton)`
   }
   & > span > img {
     margin-right: 5px;
+  }
+  @media (max-width: 670px) {
+    margin-top: 2vh;
   }
 `;
 
@@ -196,4 +209,27 @@ const NavCta = styled.div`
     padding-left: 1vw;
     padding-right: 1vw;
   }
+`;
+
+const MobilenavCta = styled.div`
+  display: none;
+  @media (max-width: 670px) {
+    display: flex;
+    align-items: center;
+  }
+`;
+
+const GetInTouchButtonMobile = styled.div`
+  background-color: #3d348b;
+  color: #fff;
+  border: none;
+  outline: none;
+  font-family: "Poppins";
+  font-weight: bold;
+  font-size: 12px;
+  padding: 10px 24px;
+  border-radius: 50px;
+  margin-right: 5vw;
+  cursor: pointer;
+  border: 1px solid white;
 `;
