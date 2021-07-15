@@ -37,58 +37,66 @@ const SkillsSection = () => {
           </Skill>
           <Skill>
             <SkillCount>07</SkillCount>
-            <SkillName>MongoDB</SkillName>
+            <SkillName>Ejs</SkillName>
           </Skill>
           <Skill>
             <SkillCount>08</SkillCount>
-            <SkillName>MySql</SkillName>
+            <SkillName>Pug</SkillName>
           </Skill>
           <Skill>
             <SkillCount>09</SkillCount>
-            <SkillName>Git</SkillName>
+            <SkillName>MongoDB</SkillName>
           </Skill>
           <Skill>
             <SkillCount>10</SkillCount>
-            <SkillName>Github</SkillName>
+            <SkillName>MySql</SkillName>
           </Skill>
           <Skill>
             <SkillCount>11</SkillCount>
-            <SkillName>Firebase</SkillName>
+            <SkillName>Git</SkillName>
           </Skill>
           <Skill>
             <SkillCount>12</SkillCount>
-            <SkillName>Linux</SkillName>
+            <SkillName>Github</SkillName>
           </Skill>
           <Skill>
             <SkillCount>13</SkillCount>
-            <SkillName>REST</SkillName>
+            <SkillName>Firebase</SkillName>
           </Skill>
           <Skill>
             <SkillCount>14</SkillCount>
-            <SkillName>JSON</SkillName>
+            <SkillName>Linux</SkillName>
           </Skill>
           <Skill>
             <SkillCount>15</SkillCount>
-            <SkillName>C++</SkillName>
+            <SkillName>REST</SkillName>
           </Skill>
           <Skill>
             <SkillCount>16</SkillCount>
-            <SkillName>Python</SkillName>
+            <SkillName>JSON</SkillName>
           </Skill>
           <Skill>
             <SkillCount>17</SkillCount>
-            <SkillName>Bootstrap</SkillName>
+            <SkillName>C++</SkillName>
           </Skill>
           <Skill>
             <SkillCount>18</SkillCount>
-            <SkillName>Tailwind</SkillName>
+            <SkillName>Python</SkillName>
           </Skill>
           <Skill>
             <SkillCount>19</SkillCount>
-            <SkillName>MaterialUI</SkillName>
+            <SkillName>Bootstrap</SkillName>
           </Skill>
           <Skill>
             <SkillCount>20</SkillCount>
+            <SkillName>Tailwind</SkillName>
+          </Skill>
+          <Skill>
+            <SkillCount>21</SkillCount>
+            <SkillName>MaterialUI</SkillName>
+          </Skill>
+          <Skill>
+            <SkillCount>22</SkillCount>
             <SkillName>Figma</SkillName>
           </Skill>
         </SkillsWrapper>

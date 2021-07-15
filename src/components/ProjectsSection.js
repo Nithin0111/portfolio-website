@@ -19,7 +19,7 @@ const ProjectsSection = () => {
               autem facilis impedit a? Magnam, recusandae!
             </ProjectDescription>
             <ProjectCtaWrapper>
-              <LiveButton>
+              <LiveButton onClick="location.href='https://whatsapp-clone-def73.web.app/'">
                 Live version{" "}
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
