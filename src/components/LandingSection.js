@@ -10,7 +10,14 @@ const LandingSection = () => {
       <Stripe1></Stripe1>
       <Stripe2></Stripe2>
       <Stripe3></Stripe3>
-      <SourceBar>
+      <SourceBar
+        onClick={() =>
+          window.open(
+            "https://github.com/Nithin0111/portfolio-website",
+            "_blank"
+          )
+        }
+      >
         Source on <img src="/images/github.png" alt="Github Icon" />
       </SourceBar>
       <LandingWrapper>
@@ -56,9 +63,16 @@ const LandingSection = () => {
                 <img src="/images/arrow-icon.svg" alt="Arrow Icon" />
               </ProjectsButton>
             </Link>
-            <ResumeButton>
+            <ResumeButton
+              onClick={() =>
+                window.open(
+                  "https://drive.google.com/file/d/1VpXyEdrwPgxlUvR-YBV2CNUpwVNaV9o7/view?usp=sharing",
+                  "_blank"
+                )
+              }
+            >
               <img src="/images/download-icon.svg" alt="" />
-              Resume(107kb)
+              Resume(75kb)
             </ResumeButton>
           </CtaWrapper>
         </HeroTextWrapper>
@@ -146,7 +160,7 @@ const SocialWrapper = styled.div`
 const SocialIcons = styled.div`
   margin-left: 10px;
   margin-top: 10px;
-  & > img {
+  & > a {
     margin-right: 10px;
   }
 `;

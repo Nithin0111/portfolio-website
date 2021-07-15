@@ -2,6 +2,10 @@ import React from "react";
 import styled from "styled-components";
 
 const ProjectsSection = () => {
+  const handleLiveClick = (url) => {
+    window.open(url, "_blank");
+  };
+
   return (
     <SectionWrapper id="projects">
       <ProjectIllustration></ProjectIllustration>
@@ -13,13 +17,17 @@ const ProjectsSection = () => {
             <ProjectCount>01</ProjectCount>
             <ProjectTitle>Whatsapp web clone</ProjectTitle>
             <ProjectDescription>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi
-              totam reprehenderit, molestias magni ad voluptatem velit
-              recusandae consequatur eaque, eos officia tempora quos cupiditate
-              autem facilis impedit a? Magnam, recusandae!
+              Created a clone of whatsapp using reactjs,react-router and
+              firebase as a backend.With functionality of signing in with google
+              adding rooms live chatting using firebase realtime database. All
+              crud operations are implemented.
             </ProjectDescription>
             <ProjectCtaWrapper>
-              <LiveButton onClick="location.href='https://whatsapp-clone-def73.web.app/'">
+              <LiveButton
+                onClick={() =>
+                  handleLiveClick("https://whatsapp-clone-def73.web.app/")
+                }
+              >
                 Live version{" "}
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -31,7 +39,13 @@ const ProjectsSection = () => {
                   <path d="M10 6v2H5v11h11v-5h2v6a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h6zm11-3v9l-3.794-3.793-5.999 6-1.414-1.414 5.999-6L12 3h9z" />
                 </svg>
               </LiveButton>
-              <SourceButton>
+              <SourceButton
+                onClick={() =>
+                  handleLiveClick(
+                    "https://github.com/Nithin0111/whatsapp-clone-with-firebase"
+                  )
+                }
+              >
                 Source code{" "}
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -46,16 +60,20 @@ const ProjectsSection = () => {
             </ProjectCtaWrapper>
           </Project>
           <Project>
-            <ProjectCount>01</ProjectCount>
-            <ProjectTitle>Whatsapp web clone</ProjectTitle>
+            <ProjectCount>02</ProjectCount>
+            <ProjectTitle>Linkedin Clone</ProjectTitle>
             <ProjectDescription>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi
-              totam reprehenderit, molestias magni ad voluptatem velit
-              recusandae consequatur eaque, eos officia tempora quos cupiditate
-              autem facilis impedit a? Magnam, recusandae!
+              Created a clone of likedin using reactjs,react-router,redux and
+              firebase.It has a functionality of signin,signout, creating a post
+              using images and for youtube videos link embedded using
+              reactplayer
             </ProjectDescription>
             <ProjectCtaWrapper>
-              <LiveButton>
+              <LiveButton
+                onClick={() =>
+                  handleLiveClick("https://linkedin-clone-aeccb.web.app/")
+                }
+              >
                 Live version{" "}
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -67,7 +85,13 @@ const ProjectsSection = () => {
                   <path d="M10 6v2H5v11h11v-5h2v6a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h6zm11-3v9l-3.794-3.793-5.999 6-1.414-1.414 5.999-6L12 3h9z" />
                 </svg>
               </LiveButton>
-              <SourceButton>
+              <SourceButton
+                onClick={() =>
+                  handleLiveClick(
+                    "https://github.com/Nithin0111/linkedin-clone"
+                  )
+                }
+              >
                 Source code{" "}
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -82,16 +106,20 @@ const ProjectsSection = () => {
             </ProjectCtaWrapper>
           </Project>
           <Project>
-            <ProjectCount>01</ProjectCount>
-            <ProjectTitle>Whatsapp web clone</ProjectTitle>
+            <ProjectCount>03</ProjectCount>
+            <ProjectTitle>Password manager</ProjectTitle>
             <ProjectDescription>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi
-              totam reprehenderit, molestias magni ad voluptatem velit
-              recusandae consequatur eaque, eos officia tempora quos cupiditate
-              autem facilis impedit a? Magnam, recusandae!
+              Created a password manager using reactjs,redux and firebase to
+              store passwords notes uses aes encryption.Has a functionality of
+              generating a password saving password in database and also has a
+              chrome extension for ease of use.
             </ProjectDescription>
             <ProjectCtaWrapper>
-              <LiveButton>
+              <LiveButton
+                onClick={() =>
+                  handleLiveClick("https://nsp-pwd-manager.web.app/")
+                }
+              >
                 Live version{" "}
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -103,7 +131,13 @@ const ProjectsSection = () => {
                   <path d="M10 6v2H5v11h11v-5h2v6a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h6zm11-3v9l-3.794-3.793-5.999 6-1.414-1.414 5.999-6L12 3h9z" />
                 </svg>
               </LiveButton>
-              <SourceButton>
+              <SourceButton
+                onClick={() =>
+                  handleLiveClick(
+                    "https://github.com/Nithin0111/password-manager"
+                  )
+                }
+              >
                 Source code{" "}
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -118,16 +152,23 @@ const ProjectsSection = () => {
             </ProjectCtaWrapper>
           </Project>
           <Project>
-            <ProjectCount>01</ProjectCount>
-            <ProjectTitle>Whatsapp web clone</ProjectTitle>
+            <ProjectCount>04</ProjectCount>
+            <ProjectTitle>Pwd manager extension</ProjectTitle>
             <ProjectDescription>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi
-              totam reprehenderit, molestias magni ad voluptatem velit
-              recusandae consequatur eaque, eos officia tempora quos cupiditate
-              autem facilis impedit a? Magnam, recusandae!
+              A chrome extension to support password manager application built
+              using Javascript and chrome apis.It has a functionality of showing
+              an icon at the password field and helps is generating password and
+              user can copy password or fill password.It uses to local storage
+              api to save copied passowrds.
             </ProjectDescription>
             <ProjectCtaWrapper>
-              <LiveButton>
+              <LiveButton
+                onClick={() =>
+                  handleLiveClick(
+                    "https://github.com/Nithin0111/PasswordManager-chrome-extension"
+                  )
+                }
+              >
                 Live version{" "}
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -139,7 +180,13 @@ const ProjectsSection = () => {
                   <path d="M10 6v2H5v11h11v-5h2v6a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h6zm11-3v9l-3.794-3.793-5.999 6-1.414-1.414 5.999-6L12 3h9z" />
                 </svg>
               </LiveButton>
-              <SourceButton>
+              <SourceButton
+                onClick={() =>
+                  handleLiveClick(
+                    "https://github.com/Nithin0111/PasswordManager-chrome-extension"
+                  )
+                }
+              >
                 Source code{" "}
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -154,16 +201,20 @@ const ProjectsSection = () => {
             </ProjectCtaWrapper>
           </Project>
           <Project>
-            <ProjectCount>01</ProjectCount>
-            <ProjectTitle>Whatsapp web clone</ProjectTitle>
+            <ProjectCount>05</ProjectCount>
+            <ProjectTitle>Github user search app</ProjectTitle>
             <ProjectDescription>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi
-              totam reprehenderit, molestias magni ad voluptatem velit
-              recusandae consequatur eaque, eos officia tempora quos cupiditate
-              autem facilis impedit a? Magnam, recusandae!
+              Created a github user search app using github api,reacjs and
+              firebase for authentication created this project when learning
+              reactjs. Has a functionality of searching any user in github and
+              display their information and their repos information.
             </ProjectDescription>
             <ProjectCtaWrapper>
-              <LiveButton>
+              <LiveButton
+                onClick={() =>
+                  handleLiveClick("https://github.com/Nithin0111/git-search")
+                }
+              >
                 Live version{" "}
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -175,7 +226,11 @@ const ProjectsSection = () => {
                   <path d="M10 6v2H5v11h11v-5h2v6a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h6zm11-3v9l-3.794-3.793-5.999 6-1.414-1.414 5.999-6L12 3h9z" />
                 </svg>
               </LiveButton>
-              <SourceButton>
+              <SourceButton
+                onClick={() =>
+                  handleLiveClick("https://github.com/Nithin0111/git-search")
+                }
+              >
                 Source code{" "}
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -189,17 +244,23 @@ const ProjectsSection = () => {
               </SourceButton>
             </ProjectCtaWrapper>
           </Project>
+
           <Project>
-            <ProjectCount>01</ProjectCount>
-            <ProjectTitle>Whatsapp web clone</ProjectTitle>
+            <ProjectCount>06</ProjectCount>
+            <ProjectTitle>Music player app</ProjectTitle>
             <ProjectDescription>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi
-              totam reprehenderit, molestias magni ad voluptatem velit
-              recusandae consequatur eaque, eos officia tempora quos cupiditate
-              autem facilis impedit a? Magnam, recusandae!
+              Created a music player using nodejs,expressjs,mongodb and gridfs.
+              It has a functionality of uploading music to mongodb database and
+              show it in the form of list of music and can play the songs.Used
+              gridfs to store the songs as we cannot directly store songs in
+              mongo.
             </ProjectDescription>
             <ProjectCtaWrapper>
-              <LiveButton>
+              <LiveButton
+                onClick={() =>
+                  handleLiveClick("https://github.com/Nithin0111/Music-App")
+                }
+              >
                 Live version{" "}
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -211,7 +272,11 @@ const ProjectsSection = () => {
                   <path d="M10 6v2H5v11h11v-5h2v6a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h6zm11-3v9l-3.794-3.793-5.999 6-1.414-1.414 5.999-6L12 3h9z" />
                 </svg>
               </LiveButton>
-              <SourceButton>
+              <SourceButton
+                onClick={() =>
+                  handleLiveClick("https://github.com/Nithin0111/Music-App")
+                }
+              >
                 Source code{" "}
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -226,7 +291,9 @@ const ProjectsSection = () => {
             </ProjectCtaWrapper>
           </Project>
         </ProjectsWrapper>
-        <GithubButton>
+        <GithubButton
+          onClick={() => handleLiveClick("https://github.com/Nithin0111/")}
+        >
           View more on github{" "}
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -292,6 +359,7 @@ const Project = styled.div`
   position: relative;
   padding: 40px 2vw;
   margin-top: 3vh;
+  min-height: 300px;
   @media (max-width: 450px) {
     width: 90%;
     margin-left: auto;
@@ -363,6 +431,7 @@ const LiveButton = styled.div`
   font-weight: 700;
   display: flex;
   align-items: center;
+  cursor: pointer;
   & > svg {
     fill: #3d348b;
     margin-left: 0.2vw;

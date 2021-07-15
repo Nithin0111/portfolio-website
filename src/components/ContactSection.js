@@ -5,6 +5,19 @@ import { animateScroll as scroll } from "react-scroll";
 
 const ContactSection = () => {
   const [sentEmail, setSentEmail] = useState(false);
+  const [name, setName] = useState("");
+  const [email, setEmail] = useState("");
+  const [message, setMessage] = useState("");
+  const [error, setError] = useState("");
+
+  function formCheck() {
+    if (name === "" || email === "" || message === "") {
+      setError("Please fill all fields");
+    } else {
+      sendEmail();
+      setError("");
+    }
+  }
 
   function sendEmail(e) {
     e.preventDefault();
@@ -51,17 +64,30 @@ const ContactSection = () => {
 
         <ContactWrapper>
           <ContactForm>
-            <p>{sentEmail ? "Email Sent" : ""}</p>
-            <form onSubmit={sendEmail}>
-              <input type="text" name="name" placeholder="Name:" />
+            <p>
+              {sentEmail ? "Email Sent" : <ErrorMessage>{error}</ErrorMessage>}
+            </p>
+            <form onSubmit={formCheck}>
+              <input
+                type="text"
+                name="name"
+                placeholder="Name:"
+                onChange={(e) => setName(e.target.value)}
+              />
               <br />
-              <input type="email" name="email" placeholder="Email:" />
+              <input
+                type="email"
+                name="email"
+                placeholder="Email:"
+                onChange={(e) => setEmail(e.target.value)}
+              />
               <br />
               <textarea
                 name="message"
                 cols="30"
                 rows="5"
                 placeholder="Message:"
+                onChange={(e) => setMessage(e.target.value)}
               />
               <br />
               <button type="submit">Submit</button>
@@ -81,9 +107,27 @@ const ContactSection = () => {
             <ContactSocialContainer>
               or else I am available here
               <ContactSocialWrapper>
-                <img src="/images/github-icon.svg" alt="Github Icon" />
-                <img src="/images/twitter-icon.svg" alt="Twitter Icon" />
-                <img src="/images/linkedin-icon.svg" alt="Linkedin Icon" />
+                <a
+                  href="https://www.github.com/nithin0111"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  <img src="/images/github-icon.svg" alt="Github Icon" />
+                </a>
+                <a
+                  href="https://www.twitter.com/nithin7557"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  <img src="/images/twitter-icon.svg" alt="Twitter Icon" />
+                </a>
+                <a
+                  href="https://www.linkedin.com/in/nithin-harsha-u-165ba4136/"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  <img src="/images/linkedin-icon.svg" alt="Linkedin-Icon" />
+                </a>
               </ContactSocialWrapper>
             </ContactSocialContainer>
 
@@ -165,7 +209,7 @@ const ContactSocialContainer = styled.div`
 
 const ContactSocialWrapper = styled.div`
   display: flex;
-  & > img {
+  & > a {
     margin-right: 0.6vw;
   }
 `;
@@ -295,4 +339,9 @@ const ContactInfo = styled.div`
   @media (max-width: 450px) {
     margin-top: 30px;
   }
+`;
+
+const ErrorMessage = styled.h4`
+  color: red;
+  font-family: "Poppins";
 `;

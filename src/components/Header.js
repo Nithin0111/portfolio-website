@@ -36,7 +36,14 @@ const Header = () => {
               <GetInTouchButton>Get In Touch</GetInTouchButton>
             </Link>
 
-            <ResumeButton>
+            <ResumeButton
+              onClick={() =>
+                window.open(
+                  "https://drive.google.com/file/d/1VpXyEdrwPgxlUvR-YBV2CNUpwVNaV9o7/view?usp=sharing",
+                  "_blank"
+                )
+              }
+            >
               <span>
                 <img src="/images/download-icon.svg" alt="Download Icon" />
               </span>
